@@ -1,0 +1,3 @@
+# LFX Connector: WS2801 LEDs through SPI
+
+Connector for [LFX](https://github.com/andrewmunsell/lfx) and WS2801 (or similar) LED pixels, through the SPI protocol. Designed for small, ARM computers such as the Raspberry Pi.
