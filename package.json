@@ -10,7 +10,7 @@
   },
   "license": "GNU GPLv3",
   "dependencies": {
-  	"spi": "^0.1.2"
+  	"pi-spi": "^1.0.0"
   },
   "engines": {
     "node": ">=0.12"

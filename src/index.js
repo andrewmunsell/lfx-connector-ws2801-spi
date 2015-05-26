@@ -5,13 +5,13 @@
  * @license http://www.gnu.org/licenses/ GNU GPLv3
  */
 
-var SPI = require('spi');
+var SPI = require('pi-spi');
 
 /**
  * Constructor for the WS2801 LED SPI connector
  */
 var WS2801_SPI_Connector = function(options) {
-	this._device = new SPI.spi(options.device);
+	this._device = SPI.initialize(options.device);
 
 	this._buffer = new Array(options.count * 3);
 	this._level = new Array(options.count);
