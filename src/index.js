@@ -61,12 +61,14 @@ WS2801_SPI_Connector.prototype.render = function(frame, deltaTime, next) {
 			return b * level[Math.floor(i / 3)];
 		});
 
-		this._device.write(new Buffer(buffer));
-
 		this._dirty = false;
-	}
 
-	next();
+		this._device.write(new Buffer(buffer), function() {
+			next();
+		});
+	} else {
+		next();
+	}
 };
 
 /**
