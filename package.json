@@ -1,6 +1,6 @@
 {
   "name": "lfx-connector-ws2801-spi",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "SPI connector for interfacing with WS2801 LEDs over the SPI protocol",
   "author": "Andrew Munsell <andrew@wizardapps.net>",
   "main": "./src/index.js",
