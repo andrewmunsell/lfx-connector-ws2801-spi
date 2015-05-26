@@ -52,7 +52,8 @@ WS2801_SPI_Connector.metadata = function() {
  * @param  {function} next
  */
 WS2801_SPI_Connector.prototype.render = function(frame, deltaTime, next) {
-	if(this._dirty === true) {
+	// Only render once per minute or when the buffer is dirty
+	if(this._dirty === true || frame % 30 * 60 == 0) {
 		// Copy the buffer and apply the levels to it
 		var level = this._level;
 
